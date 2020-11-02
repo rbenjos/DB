@@ -1,4 +1,4 @@
-import csv
+    import csv
 from io import TextIOWrapper
 from zipfile import ZipFile
 
@@ -10,7 +10,7 @@ Olympics = open("Olympics.csv", 'w',)
 Athlete = open("Athlete.csv", 'w',)
 Team = open("Team.csv", 'w',)
 Event = open("Event.csv", 'w',)
-Competed_at = open("Competed at.csv", 'w',)
+Competed_at = open("Competed_at.csv", 'w',)
 
 outwriter_o = csv.writer(Olympics, delimiter=",", quoting=csv.QUOTE_NONE)
 outwriter_a = csv.writer(Athlete, delimiter=",", quoting=csv.QUOTE_NONE)
@@ -52,7 +52,7 @@ def process_row(row):
 # return the list of all tables
 # CHANGE!!!
 def get_names():
-    return ["Athlete",'Olympics','Event','Team','Competed at']
+    return ["Athlete",'Olympics','Event','Team','Competed_at']
 
 
 if __name__ == "__main__":
