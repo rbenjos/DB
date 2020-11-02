@@ -1,0 +1,9 @@
+CREATE TABLE Athlete
+(
+ID integer primary key,
+Name varchar not null,
+Sex varchar,
+Weight integer,
+Height integer,
+)ף
+

@@ -24,18 +24,17 @@ Event varchar(100) primary key,
 Sport varchar(100) not null,
 Season varchar(100),
 Year integer,
-FOREIGN KEY (Year,Season)
-	REFRENCES Olympics(Year,Season)
+FOREIGN KEY (Year,Season) REFERENCES Olympics(Year, Season)
 );
 
-create table Competed at(
+create table Competed_at(
 ID integer,
 Event varchar(100),
 Year integer,
 Season varchar(100),
 Medal varchar(100),
 Age integer,
-FOREIGN KEY(Year,Season) REFERENCES Olympics(Year,Season),
+FOREIGN KEY(ID) REFERENCES Athlete(ID),
 FOREIGN KEY(Event) REFERENCES Event(Event),
-FOREIGN KEY(ID) REFERENCES Athlete(ID)
+FOREIGN KEY(Year,Season) REFERENCES Olympics(Year,Season)
 );

@@ -1,5 +1,5 @@
-drop table Olympics;
-drop table Athlete;
+drop table Olympics cascade;
+drop table Athlete cascade;
 drop table Team;
-drop table Event;
-drop table Competed at;
+drop table Event cascade;
+drop table Competed_at;
