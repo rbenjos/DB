@@ -1,4 +1,4 @@
-    import csv
+import csv
 from io import TextIOWrapper
 from zipfile import ZipFile
 
@@ -44,15 +44,15 @@ def process_file():
 # CHANGE!!!
 def process_row(row):
     outwriter_a.writerow([row[0],row[1],row[2],row[4],row[5]])
+    outwriter_t.writerow([row[6],row[7]])
     outwriter_o.writerow([row[9],row[10],row[11]])
     outwriter_e.writerow([row[13],row[12],row[10],row[9]])
-    outwriter_t.writerow([row[6],row[7]])
     outwriter_c.writerow([row[0],row[13],row[9],row[10],row[14],row[3]])
 
 # return the list of all tables
 # CHANGE!!!
 def get_names():
-    return ["Athlete",'Olympics','Event','Team','Competed_at']
+    return ["Athlete",'Team','Olympics','Event','Competed_at']
 
 
 if __name__ == "__main__":
